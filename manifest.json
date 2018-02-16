@@ -1,0 +1,27 @@
+{
+	"manifest_version": 2,
+	"name": "Study about chrome extention",
+	"description": "Just want to know how to make chrome extention",
+	"version": "1.0",
+	"options_page": "popup.html",
+	"permissions": ["storage", "http://*/*", "https://*/*"],
+	"web_accessible_resources": ["popup.html", "Privacy-Policy.html"],
+	"content_security_policy": "script-src 'self'; object-src 'self'",
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	},
+	"permissions": [
+		"activeTab",
+		"storage"
+	],
+	"content_scripts": [
+		{
+			"all_frames": true,
+			"css": [],
+			"js": ["jquery-2.1.4.min.js", "main.js"],
+			"matches": ["https://*/*", "http://*/*"],
+			"run_at": "document_end"
+		}
+	]
+}
