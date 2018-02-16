@@ -17,7 +17,7 @@ let check = setInterval(() => {
 		if (execute) {
 			checkbox.click();
 			sessionStorage.setItem('accesstime', new Date().getTime());
-			console('Checked!');
+			console.log('Checkbox was checked!');
 		}
 	}
 	clearInterval(check);
@@ -27,7 +27,7 @@ let check = setInterval(() => {
 let roll = setInterval(() => {
 	if ($button.length && $button.is(':visible')) {
 		$button.click();
-		console.log('Clicked');
+		console.log('Button was clicked!');
 	}
 	clearInterval(roll);
 }, 5000);
@@ -44,6 +44,3 @@ function isScrolledIntoView(elem) {
 
 	return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 }
-
-
-console.log('Hello world!');
