@@ -1,12 +1,12 @@
-let checkbox = $("#recaptcha-anchor div.recaptcha-checkbox-checkmark");
+let $checkbox = $("#recaptcha-anchor div.recaptcha-checkbox-checkmark");
 let $button = $('#free_play_form_button');
 let execute = true;
 
 let check = setInterval(() => {
 	if (window.location.href.match(/https:\/\/www.google.com\/recaptcha\/api\d\/anchor/) 
-		&& checkbox.length 
-		&& checkbox.is(':visible') 
-		&& isScrolledIntoView(checkbox.get(0))) {
+		&& $checkbox.length 
+		&& $checkbox.is(':visible') 
+		&& isScrolledIntoView($checkbox.get(0))) {
 
 		if (sessionStorage.getItem('accesstime')) {
 			if (new Date().getTime() - sessionStorage.getItem('accesstime') < 7000) {
@@ -15,7 +15,7 @@ let check = setInterval(() => {
 		}
 
 		if (execute) {
-			checkbox.click();
+			$checkbox.click();
 			sessionStorage.setItem('accesstime', new Date().getTime());
 			console.log('Checkbox was checked!');
 		}
