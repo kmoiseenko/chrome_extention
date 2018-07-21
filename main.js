@@ -5,16 +5,20 @@
 			this.rollBtn = $('#free_play_form_button');
 			this.checkBoxVisible = this.checkBox.is(':visible');
 			this.rollBtnVisible = this.rollBtn.is(':visible');
-			
+
 			if(this.checkBoxVisible) {
 				this.handleCheckBoxClick();
+				this.handleRollBtnClick();
 			} else if(this.rollBtnVisible) {
 				this.handleRollBtnClick();
 			}
 		},
 		handleCheckBoxClick: function() {
-			this.checkBox.click();
-			this.handleRollBtnClick();
+			var self = this;
+
+			setTimeout(function(){
+				self.checkBox.click();
+			}, 1000);
 		},
 		handleRollBtnClick: function() {
 			var self = this;
