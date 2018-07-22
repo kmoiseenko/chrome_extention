@@ -7,24 +7,15 @@
 			this.rollBtnVisible = this.rollBtn.is(':visible');
 
 			if(this.checkBoxVisible) {
-				this.handleCheckBoxClick();
-				this.handleRollBtnClick();
+				this.handleClick(this.checkBox);
+				this.handleClick(this.rollBtn);
 			} else if(this.rollBtnVisible) {
 				this.handleRollBtnClick();
 			}
 		},
-		handleCheckBoxClick: function() {
-			var self = this;
-
+		handleClick: function(elem) {
 			setTimeout(function(){
-				self.checkBox.click();
-			}, 1000);
-		},
-		handleRollBtnClick: function() {
-			var self = this;
-
-			setTimeout(function(){
-				self.rollBtn.click();
+				elem.click();
 			}, 1000);
 		}
 	};
