@@ -10,7 +10,7 @@
 				this.handleClick(this.checkBox);
 				this.handleClick(this.rollBtn);
 			} else if(this.rollBtnVisible) {
-				this.handleRollBtnClick();
+				this.handleClick(this.rollBtn);
 			}
 		},
 		handleClick: function(elem) {
