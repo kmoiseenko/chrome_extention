@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
-	"name": "Study about chrome extention",
-	"description": "Just want to know how to make chrome extention",
+	"name": "freebitco.in chrome extentsion",
+	"description": "This extention can click on Roll button every hour",
 	"version": "1.0",
 	"options_page": "popup.html",
 	"permissions": ["storage", "http://*/*", "https://*/*"],
